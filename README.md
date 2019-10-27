@@ -1,10 +1,14 @@
 # teamy-django
+To manage members app  
+* Python3.8
+* Virtualenv(venv)
+* Django2.2
+* SQLite3
+* Pycharm Professianl
 
 ## How to setup
 ````
 git clone git@github.com:ShuntaH/teamy-django.git
-
-git submodule update -i
 
 python3.8 -m venv venv
 
