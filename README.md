@@ -33,3 +33,7 @@ Setting
 * Manage Script -> project/manage.py
 
 Set Run Configuration
+
+## Library
+Django-bootstarap4
+https://django-bootstrap4.readthedocs.io/en/latest/quickstart.html
