@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.views import generic
 
-# Create your views here.
+from teamy.models import Member
 
 
-class IndexView(generic.TemplateView):
-    template_name = 'teamy/teamy_list.html'
+class IndexView(generic.ListView):
+    model = Member
+
 
 
