@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # pip install
     'bootstrap4',
     'widget_tweaks',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,3 +129,6 @@ STATIC_URL = '/static/'
 
 # custom user
 AUTH_USER_MODEL = 'teamy.User'
+
+# For Third party
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
