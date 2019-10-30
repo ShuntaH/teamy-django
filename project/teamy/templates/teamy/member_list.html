@@ -1,29 +1,30 @@
 {% extends 'teamy/base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-    <table class="table">
-        <thead class="thead-light">
+<table class="table">
+    <thead class="">
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Club</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for member in member_list %}
         <tr>
-            <th>ID</th>
-            <th>First name</th>
-            <th>Last name</th>
-            <th>Email</th>
-            <th>Department</th>
-            <th>Club</th>
+            <td>{{ member.pk }}</td>
+            <td>{{ member.first_name }}</td>
+            <td>{{ member.last_name }}</td>
+            <td>{{ member.email }}</td>
+            <td>{{ member.department }}</td>
+            <td>{% for club in member.club.all %}{{ club }} {% endfor %}</td>
         </tr>
-        </thead>
-        <tbody>
-        {% for member in member_list %}
-            <tr>
-                <td>{{ member.pk }}</td>
-                <td>{{ member.first_name }}</td>
-                <td>{{ member.last_name }}</td>
-                <td>{{ member.email }}</td>
-                <td>{{ member.department }}</td>
-                <td>{% for club in member.club.all %}{{ club }} {% endfor %}</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+    {% endfor %}
+    </tbody>
+</table>
 
 {% endblock %}
