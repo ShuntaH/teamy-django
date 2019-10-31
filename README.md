@@ -1,5 +1,7 @@
 # teamy-django
-To manage members app  
+To manage members app
+
+## Requirements
 * Python3.8
 * Virtualenv(venv)
 * Django2.2
@@ -10,10 +12,11 @@ To manage members app
 ````
 git clone git@github.com:ShuntaH/teamy-django.git
 
-python3.8 -m venv venv
+python3.8 -m venv venv-teamy
+# if python3.8 is not installed yet, you can download it there -> https://www.python.org/
 
 . venv/bin/activate.fish
-# if using fish
+# if using fish shell
 
 pip install -r requirements.txt
 
