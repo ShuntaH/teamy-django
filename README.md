@@ -1,12 +1,12 @@
-# teamy-django
-To manage members app
+# Teamy
+The app for listing up and filetering members by Django
 
 ## Requirements
 * Python3.8
 * Virtualenv(venv)
 * Django2.2
 * SQLite3
-* Pycharm Professianl
+* Pycharm Professional
 
 ## How to setup
 ````
