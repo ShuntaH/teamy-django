@@ -132,3 +132,9 @@ AUTH_USER_MODEL = 'teamy.User'
 
 # For Third party
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+SITE_ID = 1
+LOGIN_REDIRECT_URL = 'teamy:index'
+LOGIN_URL = 'teamy:signin'
+# サインアウト直後にsignout.htmlを経由させないでそのままsigninに行きたければかく
+# LOGOUT_REDIRECT_URL = 'memoapp:signin'
+

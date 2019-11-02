@@ -1,11 +1,13 @@
-from django.shortcuts import render
+from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
 from django.views import generic
-from .forms import SearchForm
-from teamy.models import Member
+from .forms import SearchForm, CustomUserCreationForm
+from .models import User
 
 
 class IndexView(generic.ListView):
-    model = Member
+    model = User
 
     def get_context_data(self, **kwargs):
         # テンプレートに渡す辞書の作成
@@ -38,3 +40,14 @@ class IndexView(generic.ListView):
             queryset = queryset.filter(club=club)
 
         return queryset
+
+
+class SignUpView(generic.CreateView):
+    form_class = CustomUserCreationForm
+    success_url = reverse_lazy('teamy:signin')
+    template_name = 'teamy/signup.html'
+
+    # def post(self, request, *args, **kwargs):
+    #     response = super().post(self)
+    #     messages.success(self.request, 'Your account was created successfully')
+    #     return response

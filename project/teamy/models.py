@@ -5,10 +5,6 @@ from django.utils import timezone
 # Create your models here.
 
 
-class User(AbstractUser):
-    pass
-
-
 class Department(models.Model):
     name = models.CharField('Department', max_length=20)
     created_at = models.DateTimeField('Date', default=timezone.now)
@@ -25,7 +21,7 @@ class Club(models.Model):
         return self.name
 
 
-class Member(models.Model):
+class User(AbstractUser):
     first_name = models.CharField('First name', max_length=20)
     last_name = models.CharField('Last name', max_length=20)
     email = models.EmailField('Email', blank=True)
